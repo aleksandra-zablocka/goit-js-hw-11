@@ -1,1 +1,0 @@
-{"mappings":"AAEaA,SAASC,cAAc,gBACtBD,SAASC,cAAc","sources":["src/index.js"],"sourcesContent":["import './css/styles.css';\n\nconst form = document.querySelector('#search-form');\nconst input = document.querySelector('#search-form > input')\n\n"],"names":["document","querySelector"],"version":3,"file":"index.ce7009af.js.map"}
