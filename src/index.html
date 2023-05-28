@@ -7,10 +7,11 @@
     <script type="module" src="./scripts/index.js"></script>
   </head>
   <body>
-    <form class="search-form" id="search-form">
+    <form class="search-form" id="search-form" page="1">
+      <input hidden name="page" type="number" value="1">
       <input
         type="text"
-        name="searchQuery"
+        name="q"
         autocomplete="off"
         placeholder="Search images..."
       />
