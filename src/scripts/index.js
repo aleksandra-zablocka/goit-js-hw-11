@@ -1,4 +1,4 @@
-import '../css/styles.css';
+// import '../css/styles.css';
 import { searchForPhotos, scrollHandler } from './handlers.js';
 
 const searchForm = document.querySelector('#search-form');
