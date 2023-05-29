@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
 }
 
-#search-form {
+#searchPhotosForm {
   padding: 15px;
   display: flex;
   background-color: rgb(185, 187, 212);
@@ -23,17 +23,17 @@ body {
   box-shadow: 1px 1px 1px grey;
 }
 
-#search-form > input {
+#searchPhotosForm > input {
   font-size: 15px;
 }
 
-#search-form > input:focus {
+#searchPhotosForm > input:focus {
   outline: none;
   border: 2px solid grey;
   border-radius: 2;
 }
 
-#search-form > button {
+#searchPhotosForm > button {
   cursor: pointer;
 }
 
@@ -81,4 +81,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.hidden {
+  display: none;
 }

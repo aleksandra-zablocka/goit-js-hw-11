@@ -6,5 +6,5 @@ export const DEFAULT_PARAMS = {
   image_type: 'photo',
   orientation: 'horizontal',
   safesearch: 'true',
-  per_page: '20',
+  per_page: '40',
 };
