@@ -29,8 +29,8 @@ export default async function pingPixabay({ q = '', page = '1' }) {
     if (page === '1' && q!== '') {
       Notiflix.Notify.success(`Hooray! We found ${totalHits} images.`);
     }
-  
-    return {photos, totalHits};
+    
+    return photos;
   } catch (e) {
     return { error: e.toString() };
   }
