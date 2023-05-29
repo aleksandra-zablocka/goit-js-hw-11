@@ -17,21 +17,23 @@ export default async function pingPixabay({ q = '', page = '1' }) {
       }
       return { error: response.status };
     }
-
+    if (q === '') {
+      return [];
+    }
     const { hits: photos, totalHits } = response.data;
 
     if (page !== '1' && photos.length === 0) {
       Notiflix.Notify.failure(
         "We're sorry, but you've reached the end of search results."
       );
-      return ;
+      return;
     }
 
     if (photos.length === 0) {
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
-      return ;
+      return;
     }
 
     if (page === '1' && q !== '') {

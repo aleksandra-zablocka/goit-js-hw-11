@@ -1,6 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
-const options = {}
+const options = {};
 const lightbox = new SimpleLightbox('.gallery a', options);
 
 import pingPixabay from './pixabay.js';
