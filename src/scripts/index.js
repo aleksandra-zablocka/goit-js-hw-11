@@ -1,3 +1,5 @@
+
+
 // import '../css/styles.css';
 import { searchForPhotos, scrollHandler } from './handlers.js';
 

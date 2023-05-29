@@ -10,6 +10,7 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  background-color: rgb(235, 236, 242);
 }
 
 #searchPhotosForm {
@@ -54,6 +55,8 @@ body {
   transition: box-shadow 0.5s, transform 0.5s;
   z-index: 0;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .photo-card:hover {

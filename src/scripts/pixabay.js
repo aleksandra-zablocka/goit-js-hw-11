@@ -20,16 +20,24 @@ export default async function pingPixabay({ q = '', page = '1' }) {
 
     const { hits: photos, totalHits } = response.data;
 
+    if (page !== '1' && photos.length === 0) {
+      Notiflix.Notify.failure(
+        "We're sorry, but you've reached the end of search results."
+      );
+      return ;
+    }
+
     if (photos.length === 0) {
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
-      return [];
+      return ;
     }
-    if (page === '1' && q!== '') {
+
+    if (page === '1' && q !== '') {
       Notiflix.Notify.success(`Hooray! We found ${totalHits} images.`);
     }
-    
+
     return photos;
   } catch (e) {
     return { error: e.toString() };

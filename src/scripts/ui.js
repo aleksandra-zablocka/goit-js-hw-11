@@ -1,3 +1,8 @@
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+const options = {}
+const lightbox = new SimpleLightbox('.gallery a', options);
+
 import pingPixabay from './pixabay.js';
 
 function drawPhotos({ photos, page }) {
@@ -7,11 +12,13 @@ function drawPhotos({ photos, page }) {
   }
 
   const gallery = photos.map(photo => {
-    const container = document.createElement('div');
+    const container = document.createElement('a');
     container.classList.add('photo-card');
+    container.href = photo.largeImageURL;
 
     const img = document.createElement('img');
     img.classList.add('photo');
+    img.classList.add('lightbox');
     img.src = photo.webformatURL;
     img.alt = photo.tags;
     img.setAttribute('loading', 'lazy');
@@ -45,6 +52,8 @@ function drawPhotos({ photos, page }) {
   });
 
   photoContainer.append(...gallery);
+
+  lightbox.refresh();
 }
 
 export async function loadPhotos({ q, page }) {
