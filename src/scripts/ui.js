@@ -1,4 +1,5 @@
 import pingPixabay from './pixabay.js';
+import Notiflix from 'notiflix';
 
 function drawPhotos({ photos, page }) {
   const photoContainer = document.querySelector('.gallery');
@@ -48,11 +49,17 @@ function drawPhotos({ photos, page }) {
 }
 
 export async function loadPhotos({ q, page }) {
-  const photos = await pingPixabay({ q, page });
+  const { photos, totalHits } = await pingPixabay({ q, page });
   if (photos.error) {
     alert(photos.error);
     return;
   }
   drawPhotos({ photos, page });
+
+  if (photos.length >= totalHits) {
+    Notiflix.Notify.info(
+      "We're sorry, but you've reached the end of search results."
+    );
+  }
   return;
 }

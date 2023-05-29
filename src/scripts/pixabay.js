@@ -24,11 +24,13 @@ export default async function pingPixabay({ q = '', page = '1' }) {
       Notiflix.Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
+      return [];
     }
-    if (page === '1') {
+    if (page === '1' && q!== '') {
       Notiflix.Notify.success(`Hooray! We found ${totalHits} images.`);
     }
-    return photos;
+  
+    return {photos, totalHits};
   } catch (e) {
     return { error: e.toString() };
   }
