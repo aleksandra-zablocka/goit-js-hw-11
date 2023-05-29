@@ -14,6 +14,7 @@ function drawPhotos({ photos, page }) {
     img.classList.add('photo');
     img.src = photo.webformatURL;
     img.alt = photo.tags;
+    img.setAttribute('loading', 'lazy');
     container.appendChild(img);
 
     const figCaption = document.createElement('div');
