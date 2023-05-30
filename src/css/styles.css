@@ -11,11 +11,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #212121;
   line-height: 1.5;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
       rgba(255, 255, 255, 0.473),
       rgba(255, 255, 255, 0.504)
     ),
-    url('https://cdn.pixabay.com/photo/2020/01/15/20/37/sea-4768869_1280.jpg');
+    url('https://cdn.pixabay.com/photo/2020/01/15/20/37/sea-4768869_1280.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgb(245, 242, 232);
