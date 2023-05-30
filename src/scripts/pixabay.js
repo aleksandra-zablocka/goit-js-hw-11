@@ -12,10 +12,10 @@ export default async function pingPixabay({ q = '', page = '1' }) {
 
     const response = await axios.get(`${API_PATH}?${queryString}`);
     if (response.status !== 200) {
-      // if (response.status === 400) {
+      if (response.status === 400) {
         return [];
-      // }
-      // return { error: response.status };
+      }
+      return { error: response.status };
     }
     if (q === '') {
       return [];
